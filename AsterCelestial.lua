@@ -1,3 +1,15 @@
+print("Break");
+local v0 = require(game:GetService("ReplicatedStorage").Notification);
+v0.new("<Color=Pink>Aster Hub Welcome <Color=/>"):Display();
+wait(0.5);
+v0.new("<Color=Red>https://discord.gg/saU6DY3D<Color=/>"):Display();
+wait(1);
+repeat
+    wait();
+until game.Players.LocalPlayer
+if  not game:IsLoaded() then
+    game.Loaded:Wait();
+end
 game.StarterGui:SetCore("SendNotification", {
     Title = "Aster Hub Cloud";
     Text = "Do You Want to Sync With the Cloud?";
@@ -32,7 +44,7 @@ end)
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 repeat wait() until game:IsLoaded()
 local Window = Fluent:CreateWindow({
-    Title = "Aster Celestial [ Game ]",
+    Title = "Aster Celestial [ All Map ]",
     SubTitle = "by ZeroTheNull",
     TabWidth = 120,
     Size = UDim2.fromOffset(450, 300),
@@ -41,12 +53,15 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.End
 })
 local Tabs = {
-        Main0=Window:AddTab({ Title="Blox Fruit" }),
-        Main1=Window:AddTab({ Title="Blue Lock" }),
+        Main0=Window:AddTab({ Title="Info Hub" }),
+        Main1=Window:AddTab({ Title="Blox Fruit" }),
         Main2=Window:AddTab({ Title="Dead Rail" }),
         Main3=Window:AddTab({ Title="Fishing" }),
-        Main4=Window:AddTab({ Title="Kaitun"}),
+        Main4=Window:AddTab({ Title="Blue Lock"}),
        Main5=Window:AddTab({ Title="Hop Server" }),
+       Main6=Window:AddTab({ Title="Kaitun" }),
+       Main7=Window:AddTab({ Title="Fix Lag" }),
+       Main8=Window:AddTab({ Title="Webbook" }),
 }
     Tabs.Main0:AddButton({
     Title = "Discord",
@@ -71,7 +86,20 @@ local Tabs = {
         setclipboard("tiktok.com/@tobii_dev")
     end
 })
-    
+Tabs.Main0:AddParagraph({
+    Title="Dex : Tobiii",
+    Content="Aster Hub One Top"
+})
+if executorName then
+    Tabs.Main0:AddParagraph({
+        Title="Client Executor",
+        Content=executorName
+    })
+end
+Tabs.Main0:AddParagraph({
+    Title="Update",
+    Content="23/5/2025"
+})
     Tabs.Main1:AddButton({
     Title="Aster Hub",
     Description="[ Premium ]",
@@ -159,7 +187,7 @@ end)
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 while true do
-    local textToSend = "béo chó gay report t đi"
+    local textToSend = "Tao La Jack 5 Cu Va Tao Thich Choi Gay"
     ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(textToSend, "All")
 
     wait()
@@ -168,13 +196,31 @@ end
 })
 
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Aster Hub ✅";
+    Title = "Aster Hub";
     Text = "Loading...";
-    Duration = 9;
+    Duration = 4;
 })
 
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Aster Hub 🎉";
+    Title = "Aster Hub";
     Text = "Thành Công";
-    Duration = 10;
+    Duration = 5;
+})
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Aster Hub";
+    Text = "https://discord.gg/saU6DY3D";
+    Duration = 1;
+})
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Aster Hub";
+    Text = "https://discord.gg/saU6DY3D";
+    Duration = 1;
+})
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Aster Hub";
+    Text = "https://discord.gg/saU6DY3D";
+    Duration = 1;
 })
