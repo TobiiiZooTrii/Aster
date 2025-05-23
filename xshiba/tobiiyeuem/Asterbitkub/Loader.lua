@@ -3,7 +3,7 @@ print("Break");
 local v0 = require(game:GetService("ReplicatedStorage").Notification);
 v0.new("<Color=Red>Aster Hub Cloud ✅<Color=/>"):Display();
 wait(0.5);
-v0.new("<Color=Blue>No Share Key 🚫<Color=/>"):Display();
+v0.new("<Color=Blue>Do Not Share Keys 🚫<Color=/>"):Display();
 wait(1);
 repeat
     wait();
@@ -11,12 +11,11 @@ until game.Players.LocalPlayer
 if  not game:IsLoaded() then
     game.Loaded:Wait();
 end
-setclipboard("https://discord.gg/2YCGftRB")
-end
+setclipboard("https://discord.gg/saU6DY3D")
 ----------------------------------------------------------------------------------------------------
 game.StarterGui:SetCore("SendNotification", {
     Title = "Aster Hub";
-    Text = "";
+    Text = "Do You Want to Reset Settings?";
     Icon = "rbxassetid://118600721466641";
     Duration = 1e5;
 	Button1 = "Yes";
@@ -8067,22 +8066,22 @@ Input = PVP:AddInput("Input", {
 })
 ----------------------------------------------------------------------------------------------------
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Aster Hub Loading...";
-    Text = "";
+    Title = "Mobile Loader";
+    Text = "Aster Hub Loading...";
     Icon = "rbxassetid://124374213543717";
     Duration = 5;
 })
 ----------------------------------------------------------------------------------------------------
 game.StarterGui:SetCore("SendNotification", {
     Title = "Discord";
-    Text = "";
+    Text = "https://discord.gg/saU6DY3D";
     Icon = "rbxassetid://124374213543717";
-    Duration = 11;
+    Duration = 5;
 })
 ----------------------------------------------------------------------------------------------------
 game.StarterGui:SetCore("SendNotification", {
     Title = "Aster Hub Welcome";
-    Text = "";
+    Text = "Thành Công";
     Icon = "rbxassetid://124374213543717";
     Duration = 12;
 })
