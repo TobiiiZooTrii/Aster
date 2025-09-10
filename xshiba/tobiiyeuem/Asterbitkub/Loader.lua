@@ -3,7 +3,7 @@ print("Break");
 local v0 = require(game:GetService("ReplicatedStorage").Notification);
 v0.new("<Color=Red>Aster Hub Cloud ✅<Color=/>"):Display();
 wait(0.5);
-v0.new("<Color=Blue>No Share Key 🚫<Color=/>"):Display();
+v0.new("<Color=Blue>Do Not Share Keys 🚫<Color=/>"):Display();
 wait(1);
 repeat
     wait();
@@ -11,12 +11,11 @@ until game.Players.LocalPlayer
 if  not game:IsLoaded() then
     game.Loaded:Wait();
 end
-setclipboard("https://discord.gg/2YCGftRB")
-end
+setclipboard("https://discord.gg/saU6DY3D")
 ----------------------------------------------------------------------------------------------------
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Aster Hub";
-    Text = "";
+    Title = "Aster Hub Cloud";
+    Text = "Do You Want to Reset Settings?";
     Icon = "rbxassetid://118600721466641";
     Duration = 1e5;
 	Button1 = "Yes";
@@ -2751,15 +2750,66 @@ Main:AddButton({
     Title = "Discord Aster Hub",
     Callback = function()
         pcall(function()
-            setclipboard("https://discord.gg/2YCGftRB")
+            setclipboard("https://discord.gg/saU6DY3D")
         end)
     end
 })
 Main:AddButton({
-    Title = "Copy Config !",
+    Title = "Show Fps",
     Callback = function()
         pcall(function()
-            setclipboard("https://discord.gg/2YCGftRB")
+            local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+pcall(function() setfpscap(120) end)
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "RainbowFPS"
+screenGui.ResetOnSpawn = false
+screenGui.DisplayOrder = 1000
+screenGui.IgnoreGuiInset = true
+screenGui.Parent = game:GetService("CoreGui")
+
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 120, 0, 30)
+frame.Position = UDim2.new(0, 10, 0, 10)
+frame.BackgroundTransparency = 1
+frame.Active = true
+frame.Draggable = true
+frame.Parent = screenGui
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.Position = UDim2.new(0, 0, 0, 0)
+textLabel.Font = Enum.Font.FredokaOne
+textLabel.TextScaled = true
+textLabel.BackgroundTransparency = 1
+textLabel.TextStrokeTransparency = 0.2
+textLabel.Text = "FPS: 0"
+textLabel.Parent = frame
+
+task.spawn(function()
+    local hue = 0
+    while true do
+        hue = (hue + 0.005) % 1
+        textLabel.TextColor3 = Color3.fromHSV(hue, 1, 1)
+        RunService.RenderStepped:Wait()
+    end
+end)
+
+local frameCount = 0
+local lastUpdate = tick()
+RunService.RenderStepped:Connect(function()
+    frameCount = frameCount + 1
+    local now = tick()
+    if now - lastUpdate >= 1 then
+        local fps = math.floor(frameCount / (now - lastUpdate))
+        textLabel.Text = "FPS: " .. tostring(fps)
+        frameCount = 0
+        lastUpdate = now
+    end
+end)
         end)
     end
 })
@@ -8067,22 +8117,22 @@ Input = PVP:AddInput("Input", {
 })
 ----------------------------------------------------------------------------------------------------
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Aster Hub Loading...";
-    Text = "";
+    Title = "Mobile Loader";
+    Text = "Aster Hub Loading...";
     Icon = "rbxassetid://124374213543717";
     Duration = 5;
 })
 ----------------------------------------------------------------------------------------------------
 game.StarterGui:SetCore("SendNotification", {
     Title = "Discord";
-    Text = "";
+    Text = "https://discord.gg/saU6DY3D";
     Icon = "rbxassetid://124374213543717";
-    Duration = 11;
+    Duration = 5;
 })
 ----------------------------------------------------------------------------------------------------
 game.StarterGui:SetCore("SendNotification", {
     Title = "Aster Hub Welcome";
-    Text = "";
+    Text = "Thành Công";
     Icon = "rbxassetid://124374213543717";
     Duration = 12;
 })
